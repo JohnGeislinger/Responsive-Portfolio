@@ -133,7 +133,7 @@ h3, h2 {
   width: 100%;
   max-width: 960px;
   padding: 30px;
-  margin: 0 0 40px;
+  margin: 0px 0px 40px 0px;
   background: #ffffff;
   border: 1px solid #dddddd;
 }
@@ -143,8 +143,9 @@ h3, h2 {
 .work {
   position: relative;
   float: left;
-  width: 274px;
-  margin: 20px 0 25px;
+  width: calc(50% - 40px);
+  height: auto;
+  margin: 20px auto 25px auto;
   overflow: auto;
 }
 
@@ -152,8 +153,13 @@ h3, h2 {
   margin-right: 40px;
 }
 
+.work:nth-child(odd) {
+  float: right;
+}
+
 .work img {
   width: 100%;
+  height: auto;
   border: 0 none;
   opacity: 0.8;
 }
@@ -174,7 +180,7 @@ h3, h2 {
 
 .auth-image {
   float: left;
-  width: 200px;
+  width: 50%;
   height: auto;
   margin-top: 10px;
   margin-right: 25px;
@@ -224,8 +230,16 @@ input[type=submit] {
 
 /* responsive */
 
-@media screen and (max-width: 980px) {
-
+@media screen and (max-width: 1030px) {
+  .main-section {
+    float: left;
+    width: calc(100% - 40px);
+    max-width: 960px;
+    padding: 30px;
+    margin: 0px 20px 40px 20px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -262,59 +276,28 @@ input[type=submit] {
   
   .main-section {
     float: left;
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 960px;
     padding: 30px;
     margin: 20px 20px 40px 20px;
     background: #ffffff;
     border: 1px solid #dddddd;
   }
-    
-    .grid-container {
-        display: grid;
-        width: 100%;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-    }
-    
-    .content-hangman {
-        grid-column: 1;
-        grid-row: 1;
-        position: relative;
-    }
-    
-    .content-rpg {
-        grid-column: 1;
-        grid-row: 2;
-        position: relative;
-    }
-    
-    .content-trivia {
-        grid-column: 1;
-        grid-row: 3;
-        position: relative;
-    }
-    
-    .content-widget {
-        grid-column: 1;
-        grid-row: 4;
-        position: relative;
-    }
-    
-    .content-rps {
-        grid-column: 1;
-        grid-row: 5;
-        position: relative;
-    }
-    
-    .label {
-        margin: 0px;
-        padding: 15px 0px;
-        text-align: center;
-        color: #ffffff;
-        background: #4aaaa5;
-        position: absolute;
-        bottom: 10px;
-        width: 200px;
-    }
+
+  .auth-image {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+
+  .work {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 20px 0 25px;
+    overflow: auto;
+  }
 }
