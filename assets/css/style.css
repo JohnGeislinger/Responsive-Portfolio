@@ -269,6 +269,17 @@ input[type=submit] {
     text-align: center;
   }
 
+  nav a {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+    line-height: 18px;
+    color: #999;
+    text-decoration: none;
+    border-left: 1px solid #efefef;
+  }
+
   #main-container {
     padding-top: 155px;
     min-height: calc(100vh - 70px);
